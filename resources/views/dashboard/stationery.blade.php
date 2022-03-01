@@ -71,8 +71,8 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <img src="assets/img/{{ $stationery->adno }}.jpg" 
-                                                class="me-2 rounded-circle prof-img" height="48" width="48">
+                                                {{-- <img src="assets/img/{{ $stationery->adno }}.jpg" 
+                                                class="me-2 rounded-circle prof-img" height="48" width="48"> --}}
                                                 <p class="m-0 d-inline-block align-middle font-16">
                                                     <a href="{{route('viewStudent',$stationery->id)}}"
                                                         class="text-body">{{ $stationery->name }}</a>

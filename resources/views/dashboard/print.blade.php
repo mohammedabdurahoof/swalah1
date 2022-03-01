@@ -38,7 +38,11 @@
                                             class="mdi mdi-cog-outline me-2"></i>Pay</button>
                                             <button type="button" class="btn btn-light mb-2 me-1"
                                             data-bs-toggle="modal" data-bs-target="#top-modal">Import</button>
-                                    <button type="button" class="btn btn-light mb-2">Export</button>
+                                            <form action="{{ route('exportPrint') }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-light mb-2">Export</button>
+        
+                                            </form>
                                 </div>
                             </div><!-- end col-->
                         </div>
@@ -72,8 +76,8 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <img src="assets/img/{{ $print->adno }}.jpg" 
-                                                class="me-2 rounded-circle prof-img" height="48" width="48">
+                                                {{-- <img src="assets/img/{{ $print->adno }}.jpg" 
+                                                class="me-2 rounded-circle prof-img" height="48" width="48"> --}}
                                                 <p class="m-0 d-inline-block align-middle font-16">
                                                     <a href="{{route('viewStudent',$print->id)}}"
                                                         class="text-body">{{ $print->name }}</a>

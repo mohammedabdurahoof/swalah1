@@ -55,6 +55,8 @@ Route::get('/printslip',[adminController::class, 'printSlip'])->name('printSlip'
 
 Route::post('import', [excelController::class, 'fileImport'])->name('import');
 Route::post('importPrint', [excelController::class, 'importPrint'])->name('importPrint');
+Route::post('exportPrint', [excelController::class, 'exportPrint'])->name('exportPrint');
+
 
 
 
